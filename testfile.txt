@@ -1,1 +1,3 @@
 These are the contents of the textfile
+
+Which I have now edited
