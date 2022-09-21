@@ -1,0 +1,172 @@
+ 1  sudo apt update && sudo apt install john -y                                                                          
+2  pwd                                                                                                                  
+3  mkdir weissman                                                                                                       
+4  ls                                                                                                                   
+5  cd weissman                                                                                                          
+6  cd ..                                                                                                                
+7  cd /home/base/weissman                                                                                               
+8  mkdir jonathan scott                                                                                                 
+9  cd jonathan                                                                                                         
+10  cd ../scott                                                                                                         
+11  cd ../..                                                                                                            
+12  cd ~/weissman/jonathan                                                                                              
+13  touch cscprof                                                                                                       
+14  ls                                                                                                                  
+15  cp cscprof ../scott                                                                                                 
+16  ls ../scott                                                                                                         
+17  cp cscprof ../scott/cscprof2                                                                                        
+18  ls ../scott                                                                                                         
+19  cp ../scott/cscprof ./professor                                                                                     
+20  ls                                                                                                                  
+21  cd                                                                                                                  
+22  mv weissman profweissman                                                                                            
+23  ls                                                                                                                  
+24  touch oldname                                                                                                       
+25  mv oldname newname                                                                                                  
+26  ls                                                                                                                  
+27  rm newname                                                                                                          
+28  ls                                                                                                                  
+29  mkdir hellogoodbye                                                                                                  
+30  rmdir hellogoodbye                                                                                                  
+31  rmdir profweissman/scott                                                                                            
+32  rm profweissman/scott                                                                                               
+33  rm -r profweissman/scott                                                                                            
+34  ls /profweissman                                                                                                    
+35  ls                                                                                                                  
+36  cd profweissman                                                                                                     
+37  ls                                                                                                                  
+38  cd                                                                                                                  
+39  echo Jonathan Scott Weissman                                                                                        
+40  echo Jonathan Scott Weissman > rochester                                                                            
+41  cat rochester                                                                                                       
+42  echo RIT > rochester                                                                                                
+43  cat rochester                                                                                                       
+44  echo FLCC >> rochester                                                                                              
+45  cat rochester                                                                                                      
+46  tac rochester                                                                                                       
+47  sort rochester                                                                                                      
+48  sudo adduser jsw                                                                                                    
+49  sudo passwd jsw                                                                                                     
+50  su jsw                                                                                                              
+51  whoami                                                                                                              
+52  vim bob                                                                                                             
+53  sudo apt install vim                                                                                                
+54  vim bob                                                                                                             
+55  bob                                                                                                                 
+56  ./bob                                                                                                               
+57  ls -l bob                                                                                                           
+58  chmod 744 bob                                                                                                       
+59  ls -l bob                                                                                                           
+60  ./bob                                                                                                               
+61  mkdir monroe                                                                                                        
+62  ls -l | grep monroe                                                                                                 
+63  chmod 754 monroe                                                                                                    
+64  ls -l | grep monroe                                                                                                 
+65  cd monroe                                                                                                           
+66  echo meadowbrook > brighton                                                                                         
+67  cat brighton                                                                                                        
+68  ls -l brighton                                                                                                      
+69  su jsw                                                                                                              
+70  cd ..                                                                                                               
+71  chmod 755 monroe                                                                                                    
+72  ls -l | grep monroe                                                                                                 
+73  cd monroe                                                                                                           
+74  su jsw                                                                                                              
+75  cd ..                                                                                                               
+76  chmod 777 monroe                                                                                                    
+77  ls -l | grep monroe                                                                                                 
+78  su jsw                                                                                                              
+79  chmod 777 monroe                                                                                                    
+80  chmod 777 brighton                                                                                                  
+81  cd monroe                                                                                                           
+82  chmod 777 brightmod                                                                                                 
+83  ls -l | grep monroe                                                                                                 
+84  cd                                                                                                                  
+85  ls -l | grep monroe                                                                                                 
+86  cd monroe                                                                                                           
+87  chmod 777 brighton                                                                                                  
+88  ls -l | brighton                                                                                                    
+89  ls                                                                                                                  
+90  su jsw                                                                                                              
+91  cd ..                                                                                                               
+92  ls -l /usr/bin/passwd                                                                                               
+93  mkdir sgid                                                                                                          
+94  chmod 2767 sgid                                                                                                     
+95  ls -l | grep sgid                                                                                                   
+96  chmod 2777 sgid                                                                                                     
+97  ls -l | grep sgid                                                                                                   
+98  su jsw                                                                                                              
+99  mkdir stickybit                                                                                                    
+100  chmod 1777 stickybit                                                                                               
+101  ls -l | grep stickybit                                                                                             
+102  cd stickybit                                                                                                       
+103  echo hi > file1                                                                                                    
+104  su jsw                                                                                                             
+105  cd ..                                                                                                              
+106  echo date >> pizza                                                                                                 
+107  ls -l pizza                                                                                                        
+108  chmod 744 pizza                                                                                                    
+109  ls -l pizza                                                                                                        
+110  sudo chown jsw pizza                                                                                               
+111  ls -l pizza                                                                                                        
+112  sudo chgrp jsw pizza                                                                                               
+113  ls -l pizza                                                                                                        
+114  su jsw                                                                                                             
+115  sudo chown base:base pizza                                                                                         
+116  ls -l                                                                                                              
+117  su jsw                                                                                                             
+118  sudo addgroup pentesters1                                                                                          
+119  sudo addgroup pentesters2                                                                                          
+120  sudo usermod -a -G pentesters1,pentesters2 jsw                                                                     
+121  grep pentesters /etc/group                                                                                         
+122  groups jsw                                                                                                         
+123  cat /etc/group                                                                                                     
+124  sudo usermod -G pentesters jsw                                                                                     
+125  sudo usermod -G pentesters1 jsw                                                                                    
+126  groups jsw                                                                                                         
+127  sudo usermod -a -G pentesters1,pentesters2 jsw                                                                     
+128  sudo gpasswd -d jsw pentesters2                                                                                    
+129  groups jsw                                                                                                         
+130  sudo adduser alice                                                                                                 
+131  sudo deluser alice                                                                                                 
+132  sudo addgroup cryptographers                                                                                       
+133  sudo delgroup cryptographers                                                                                       
+134  cd /                                                                                                               
+135  ls -a                                                                                                              
+136  ls -F                                                                                                              
+137  ls -R                                                                                                              
+138  ls -R | more                                                                                                       
+139  ls -R | less                                                                                                       
+140  clear                                                                                                              
+141  find / -name ping 2>&1 | grep -v "Permission denied"                                                               
+142  man find                                                                                                           
+143  vim months                                                                                                         
+144  cd                                                                                                                 
+145  vim months                                                                                                         
+146  head months                                                                                                        
+147  head -7 months                                                                                                     
+148  head -n 7 months                                                                                                   
+149  head -n -3 months                                                                                                  
+150  tail months                                                                                                        
+151  tail -3 months                                                                                                     
+152  tail -n 3 months                                                                                                   
+153  tail +3 months                                                                                                     
+154  tail -n +3 months                                                                                                  
+155  cat /etc/passwd                                                                                                    
+156  sudo cat /etc/shadow                                                                                               
+157  sudo john                                                                                                          
+158  sudo john --test                                                                                                   
+159  sudo adduser weissman                                                                                              
+160  sudo adduser upper                                                                                                 
+161  sudo adduser lower                                                                                                 
+162  sudo adduser mixed                                                                                                 
+163  sudo adduser story                                                                                                 
+164  cat /etc/passwd                                                                                                    
+165  sudo cat /etc/shadow                                                                                               
+166  sudo unshadow /etc/passwd /etc/shadow > rochester.txt                                                              
+167  cat rochester.txt                                                                                                  
+168  sudo john --wordlist=/user/share/john/password.lst --format=crypt rochester.txt                                    
+169  sudo john --wordlist=/usr/share/john/password.lst --format=crypt rochester.txt                                     
+170  sudo john --show --format=crypt rochester.txt                                                                      
+171  sudo rm /root/.john/john.pot                                                                                       
+172  history  
