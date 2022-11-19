@@ -1,0 +1,71 @@
+$ winpty openssl genrsa -out CA.key -des3 2048
+Generating RSA private key, 2048 bit long modulus (2 primes)
+....+++++
+.........+++++
+e is 65537 (0x010001)
+Enter pass phrase for CA.key:
+Verifying - Enter pass phrase for CA.key:
+
+$ winpty openssl req -x509 -sha256 -new -nodes -days 3650 -key CA.key -out CA.pem
+Enter pass phrase for CA.key:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:Connecticut
+Locality Name (eg, city) []:Danbury
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:CS298
+Organizational Unit Name (eg, section) []:Final Project
+Common Name (e.g. server FQDN or YOUR name) []:Bryan Perez
+Email Address []:perez221@wcsu.edu
+
+$ mkdir localhost
+
+$ cd localhost
+
+$ touch localhost.ext
+
+$ winpty openssl genrsa -out localhost.key -des 2048
+Generating RSA private key, 2048 bit long modulus (2 primes)
+........................................+++++
+.............+++++
+e is 65537 (0x010001)
+Enter pass phrase for localhost.key:
+Verifying - Enter pass phrase for localhost.key:
+
+$ winpty openssl req -new -key localhost.key -out localhost.csr
+Enter pass phrase for localhost.key:
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:Connecticut
+Locality Name (eg, city) []:Danbury
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:CS298
+Organizational Unit Name (eg, section) []:Final Project
+Common Name (e.g. server FQDN or YOUR name) []:Bryan Perez
+Email Address []:perez221@wcsu.edu
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:password
+An optional company name []:
+
+$ winpty openssl x509 -req -in localhost.csr -CA ../CA.pem -CAkey ../CA.key -CAcreateserial -days 3650 -sha256 -extfile localhost.ext -out localhost.crt
+Signature ok
+subject=C = US, ST = Connecticut, L = Danbury, O = CS298, OU = Final Project, CN
+ = Bryan Perez, emailAddress = perez221@wcsu.edu
+Getting CA Private Key
+Enter pass phrase for ../CA.key:
+
+$ winpty openssl rsa -in localhost.key -out localhost.decrypted.key
+Enter pass phrase for localhost.key:
+writing RSA key

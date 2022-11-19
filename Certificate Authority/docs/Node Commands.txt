@@ -1,0 +1,41 @@
+Your environment has been set up for using Node.js 18.12.1 (x64) and npm.
+
+C:\Users\User>D:
+
+
+D:\>cd D:\User\Documents\WCSU\Fall 2022\CS 298\test repo\Certificate Authority
+
+D:\User\Documents\WCSU\Fall 2022\CS 298\test repo\Certificate Authority> npm init -y
+Wrote to D:\User\Documents\WCSU\Fall 2022\CS 298\test repo\Certificate Authority\package.json:
+
+{
+  "name": "certificate-authority",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+
+D:\User\Documents\WCSU\Fall 2022\CS 298\test repo\Certificate Authority>npm i express https
+
+added 58 packages, and audited 59 packages in 2s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice
+npm notice New major version of npm available! 8.19.2 -> 9.1.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v9.1.2
+npm notice Run npm install -g npm@9.1.2 to update!
+npm notice
+
+D:\User\Documents\WCSU\Fall 2022\CS 298\test repo\Certificate Authority>node index.js
+Server is listening on https://localhost:3000
